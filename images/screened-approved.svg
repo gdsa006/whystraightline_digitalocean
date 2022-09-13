@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#5D6F7A;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#FFFFFF;stroke:#5D6F7A;stroke-width:16.2254;stroke-miterlimit:10;}
+	.st3{fill:#28373E;}
+	.st4{fill:url(#SVGID_1_);}
+	.st5{fill:url(#SVGID_2_);}
+	.st6{fill:url(#SVGID_3_);}
+	.st7{fill:#5A6163;}
+	.st8{font-family:'Gotham-Bold';}
+	.st9{font-size:134.478px;}
+	.st10{font-family:'Gotham-Book';}
+	.st11{font-size:30.9942px;}
+	.st12{letter-spacing:10;}
+	.st13{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M979.17,500c0,47.67-70.86,83.55-84.83,126.56c-14.47,44.58,21.26,115.17-5.75,152.27
+			c-27.27,37.48-105.63,25.17-143.11,52.44c-37.11,27-49.46,105.48-94.04,119.95c-43.01,13.97-98.94-41.8-146.61-41.8
+			c-47.67,0-103.6,55.77-146.61,41.8c-44.58-14.47-56.93-92.95-94.04-119.95c-37.48-27.27-115.83-14.97-143.11-52.44
+			c-27-37.11,8.73-107.69-5.75-152.27C101.36,583.55,30.5,547.67,30.5,500c0-47.67,70.86-83.55,84.83-126.56
+			c14.47-44.58-21.26-115.17,5.75-152.27c27.27-37.48,105.63-25.17,143.11-52.44c37.11-27,49.46-105.48,94.04-119.95
+			c43.01-13.97,98.94,41.8,146.61,41.8c47.67,0,103.6-55.77,146.61-41.8c44.58,14.47,56.93,92.95,94.04,119.95
+			c37.48,27.27,115.83,14.97,143.11,52.44c27,37.11-8.73,107.69,5.75,152.27C908.3,416.45,979.17,452.33,979.17,500z"/>
+	</g>
+	<circle class="st1" cx="504.83" cy="500" r="368.7"/>
+	<path class="st2" d="M956.38,624.28H43.62c-15.25,0-27.62-12.36-27.62-27.62V417.15c0-15.25,12.36-27.62,27.62-27.62h912.76
+		c15.25,0,27.62,12.36,27.62,27.62v179.51C984,611.91,971.64,624.28,956.38,624.28z"/>
+	<g>
+		<polygon class="st3" points="282.22,503.58 277.45,499.17 308.96,465.16 344.19,494.54 340.03,499.53 309.53,474.1 		"/>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="255.8296" y1="481.1701" x2="309.2448" y2="481.1701">
+			<stop  offset="0" style="stop-color:#4E73D1"/>
+			<stop  offset="1" style="stop-color:#269BD6"/>
+		</linearGradient>
+		<polygon class="st4" points="309.24,465.3 255.83,476.13 279.83,497.04 		"/>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="380.7056" y1="512.9382" x2="278.9281" y2="512.9382">
+			<stop  offset="0" style="stop-color:#4E73D1"/>
+			<stop  offset="1" style="stop-color:#269BD6"/>
+		</linearGradient>
+		<polygon class="st5" points="278.93,502.11 380.71,486.95 324.94,538.92 		"/>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="161.2703" y1="500.6672" x2="325.125" y2="500.6672">
+			<stop  offset="0" style="stop-color:#4E73D1"/>
+			<stop  offset="0.3209" style="stop-color:#467BD2"/>
+			<stop  offset="0.8232" style="stop-color:#3091D5"/>
+			<stop  offset="1" style="stop-color:#269BD6"/>
+		</linearGradient>
+		<polygon class="st6" points="161.27,462.41 258,476.85 325.12,538.92 243.2,538.92 		"/>
+		<polygon class="st3" points="477.22,546.5 432.77,546.5 380.63,495.74 326.38,545.06 241.93,545.06 161.31,471.18 82.09,546.5 
+			49.83,546.5 49.83,540.01 79.5,540.01 161.23,462.3 244.46,538.56 323.87,538.56 380.78,486.82 435.41,540.01 477.22,540.01 		"/>
+		<g>
+			<path class="st3" d="M160.18,512.66v-12.09c-6.06,0.27-10.9,5.26-10.9,11.39v0.7H160.18z"/>
+			<path class="st3" d="M161.2,512.66h10.9v-0.7c0-6.13-4.84-11.13-10.9-11.39V512.66z"/>
+			<rect x="149.29" y="513.67" class="st3" width="10.9" height="9.7"/>
+			<rect x="161.2" y="513.67" class="st3" width="10.9" height="9.7"/>
+		</g>
+		<g>
+			<path class="st3" d="M380.31,519.53v-8.86c-4.44,0.19-7.98,3.86-7.98,8.35v0.51H380.31z"/>
+			<path class="st3" d="M381.06,519.53h7.98v-0.51c0-4.49-3.54-8.15-7.98-8.35V519.53z"/>
+			<rect x="372.33" y="520.27" class="st3" width="7.98" height="7.1"/>
+			<rect x="381.06" y="520.27" class="st3" width="7.98" height="7.1"/>
+		</g>
+		<g>
+			<path class="st3" d="M309.75,485v-4.65c-2.33,0.1-4.19,2.02-4.19,4.38V485H309.75z"/>
+			<path class="st3" d="M310.14,485h4.19v-0.27c0-2.36-1.86-4.28-4.19-4.38V485z"/>
+			<rect x="305.56" y="485.39" class="st3" width="4.19" height="3.73"/>
+			<rect x="310.14" y="485.39" class="st3" width="4.19" height="3.73"/>
+		</g>
+		<polygon class="st7" points="85.16,546.5 160.18,473.65 90.07,546.5 		"/>
+		<polygon class="st7" points="238.97,545.26 162.28,474.53 234.06,545.37 		"/>
+		<polygon class="st7" points="329.82,545.16 380.31,497.04 332.91,545.16 		"/>
+		<polygon class="st7" points="429.29,546.3 380.47,496.9 426.19,546.2 		"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 482.2417 541.1104)" class="st3 st8 st9">idaho</text>
+		<text transform="matrix(1 0 0 1 489.644 576.7559)" class="st3 st10 st11 st12">ROOFING COST</text>
+	</g>
+	<path id="SVGID_x5F_4_x5F_" class="st13" d="M240.74,369.16c0,0,98.04-136.02,264.44-136.02s263.75,146.37,263.75,146.37"/>
+	<text>	<textPath  xlink:href="#SVGID_x5F_4_x5F_" startOffset="4.1016%">
+<tspan  class="st0" style="font-family:'Gotham-Medium'; font-size:93.296px;">SCREENED &amp;</tspan>	</textPath>
+</text>
+	<path id="SVGID_x5F_5_x5F_" class="st13" d="M224.32,685.26c0,0,91.1,154.54,274.92,154.54s312.34-154.54,312.34-154.54"/>
+	<text>	<textPath  xlink:href="#SVGID_x5F_5_x5F_" startOffset="6.0547%">
+<tspan  class="st0" style="font-family:'Gotham-Medium'; font-size:95.5724px;">APPROVED</tspan>	</textPath>
+</text>
+</g>
+</svg>

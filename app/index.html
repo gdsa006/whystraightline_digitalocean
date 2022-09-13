@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Application</title>
+    <style>
+        body {
+            background-color:#e5e5e5;
+        }
+        
+        .btn-custom {
+            margin-bottom: 20px;
+            padding: 16px 32px;
+            border-radius: 48px;
+            background-color: #22344d;
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            border: 0;
+            line-height: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        header {
+            padding: 90px 0;
+            background-color: black;
+        }
+
+        header * {
+            color: #ffffff;
+        }
+
+        .form-group{
+            padding-bottom: 13px;
+        }
+        
+        .form-group label.error:nth-child(2) {
+            display: none;
+        }
+
+        form label{
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        form input.form-control, form select.form-control {
+            line-height: 1.9;
+        }
+
+        .wizard .content h3 {
+            position: absolute;
+            left: -999em;
+        }
+
+        .wizard .steps>ul {
+            position: absolute;
+            left: -999em;
+        }
+        
+        .wizard .error{
+            border-color: #8a1f11;
+        }
+        
+        .wizard > .content > .body label.error {
+           color: #8a1f11;
+           font-size: 12px;
+           position: relative;
+           left: 20px;
+        }
+
+        .actions{
+            padding: 20px 0
+        }
+
+        .actions ul{
+            display: inline-block;
+            padding: 0;
+            width: 100%;
+            list-style: none
+        }
+
+        .actions ul li{
+            display: inline;
+        }
+
+        .actions ul li:nth-child(1){
+            float: left;
+        }
+
+        .actions ul li:nth-child(2){
+            float: right;
+        }
+        
+        @media(max-width: 767px){
+            header{
+                padding: 40px 0 !important;
+            }    
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container text-center">
+            <h1>Logo</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="col-md-6 offset-md-3 col-12">
+                <div class="main-heading pt-5 pb-5">
+                    <h2 class="pb-3 border-bottom">Main Application</h2>
+                </div>
+                <form id="contact" action="#">
+                    <div>
+                        <h3>Account</h3>
+                        <section>
+                            <div class="form-group">
+                                <label for="q1">What are you doing now?</label>
+                                <input id="q1" name="q1" type="text" class="form-control required">
+                            </div>
+                            <div class="form-group">
+                                <label for="q2">Why are you interested in exploring what we do?</label>
+                                <input id="q2" name="q2" type="text" class="form-control required">
+                            </div>
+                            <div class="form-group">
+                                <label for="q3">What is it that motivates you?</label>
+                                <input id="q3" name="q3" type="text" class="form-control required">
+                            </div>
+                        </section>
+                        <h3>Profile</h3>
+                        <section>
+                            <div class="form-group">
+                                <label for="q4">If you got 10-15 qualified appointments can you manage that
+                                    well?</label>
+                                <input id="q4" name="q4" type="text" class="form-control required">
+                            </div>
+                            <div class="form-group">
+                                <label for="q5">Besides money, what is important to you?</label>
+                                <input id="q5" name="q5" type="text" class="form-control required">
+                            </div>
+                            <div class="form-group">
+                                <label for="q6">What is your short term and long term goals</label>
+                                <input id="q6" name="q6" type="text" class="form-control required">
+                            </div>
+                        </section>
+                        <h3>Hints</h3>
+                        <section>
+                            <div class="form-row pb-4">
+                                <div class="col">
+                                    <label for="q7">Your Name</label>
+                                    <input id="q7" name="q7" type="text" class="form-control required">
+                                </div>
+                                <div class="col">
+                                    <label for="q8">Last Name</label>
+                                    <input id="q8" name="q8" type="text" class="form-control required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="q9">Your Best Email</label>
+                                <input id="q9" name="q9" type="email" class="form-control required">
+                            </div>
+                        </section>
+                        <h3>Test</h3>
+                        <section>
+                            <div class="form-group">
+                                <label for="q10">Right Now I...</label>
+                                <select class="form-control" id="q10" name="q10">
+                                    <option selected>Choose One...</option>
+                                    <option value="I am ready to fast track and accelerate my success">I am ready to fast track and accelerate my success</option>
+                                    <option value="I am just looking around">I am just looking around</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q11">Best Time To Call...</label>
+                                <input id="q11" name="q11" type="text" class="form-control required">
+                            </div>
+                            <div class="form-group">
+                                <label for="q12">Yes, You Can Count On Me To Prioritize Our Phone Call</label>
+                                <input id="q12" name="q12" type="text" class="form-control required"
+                                    placeholder="Yes or No">
+                            </div>
+                        </section>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script>
+
+    <script>
+        var form = $("#contact");
+        form.validate({
+            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            rules: {
+                confirm: {
+                    equalTo: "#password"
+                },
+                qp: {
+                    emailExt: true
+                }
+            }
+        });
+        form.children("div").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true,
+            onInit: function (event, current) {
+                $('.actions > ul > li:first-child').attr('style', 'display:block');
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                // Allways allow step back to the previous step even if the current step is not valid!
+                if (currentIndex > newIndex)
+                {
+                   return true;
+                }
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            },
+            onFinishing: function (event, currentIndex) {
+                form.validate().settings.ignore = ":disabled";
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex) {
+                // Get form
+                var form = $('#contact')[0];
+
+                // Create an FormData object 
+                var data = new FormData(form);
+
+                // disabled the submit button
+                $(".btn-custom").text('Processing...');
+                $(".btn-custom").prop("disabled", true);
+
+                $.ajax({
+                    type: "POST",
+                    url: "send_mail.php",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 800000
+                })
+                .done(function( msg ) {
+                    $(".btn-custom").prop("disabled", false);
+                    if(msg){
+                        $('main').hide();
+                        $('body').append("<main class='py-5'><div class='container'><h4 class='py-5'>Thankyou!</h4></div></main>");
+                    }
+                });            
+            }
+        });
+    </script>
+
+
+<script>
+    $( document ).ready(function() {
+        $('.actions ul li a').addClass('btn btn-primary btn-custom');
+    });
+</script>
+</body>
+
+</html>

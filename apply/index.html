@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="date-time.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="Favicon-01.png" />
+
+    <title>Straightline Application</title>
+    <style>
+        @font-face {
+            font-family: 'Circular';
+            src: url('https://assets.website-files.com/606477f876b285d1aaa0ea55/6064805857784409c85da006_CircularStd-Medium.woff2') format('woff2'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058a6a393a22925414f_CircularStd-Medium.eot') format('embedded-opentype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058a5870e9ad62b6dc0_CircularStd-Medium.woff') format('woff'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058c1435b2b27429844_CircularStd-Medium.ttf') format('truetype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480e6481fbc6e8cbb23f9_CircularStd-Medium.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Circular';
+            src: url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480582459c864fae538b8_CircularStd-Book.woff2') format('woff2'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/6064805824478818d5612896_CircularStd-Book.eot') format('embedded-opentype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480582b27e283b0fd1e04_CircularStd-Book.woff') format('woff'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058268dd518ccb1c743_CircularStd-Book.ttf') format('truetype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480e643ee59e56e92629a_CircularStd-Book.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Circular';
+            src: url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058e2f2f46a08b85d47_CircularStd-Black.woff2') format('woff2'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058c28d216316200f34_CircularStd-Black.eot') format('embedded-opentype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058a1481eb41e187b00_CircularStd-Black.woff') format('woff'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058b75a2a515092972c_CircularStd-Black.ttf') format('truetype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480e66392172401afafc5_CircularStd-Black.otf') format('opentype');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Circular';
+            src: url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480582b27e27b92fd1e03_CircularStd-Bold.woff2') format('woff2'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058440f12e7e6b4004c_CircularStd-Bold.eot') format('embedded-opentype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480585b57e27b66475d66_CircularStd-Bold.woff') format('woff'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058a6a393ed2025414e_CircularStd-Bold.ttf') format('truetype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480e69f78707173745fec_CircularStd-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Circular';
+        }
+
+        .btn-custom {
+            margin-bottom: 20px;
+            padding: 11px 32px;
+            border-radius: 48px;
+            background-color: #22344d;
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            border: 0;
+            line-height: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-custom:hover{
+            color: #ffffff;
+        }
+
+        .btn-custom[href^="#previous"] {
+            background-color: grey !important;
+        }
+
+        .btn-custom[href^="#previous"]:hover,
+        .btn-custom[href^="#previous"]:active,
+        .btn-custom[href^="#previous"]:focus {
+            background-color: grey !important;
+        }
+
+        .btn-custom.colorme {
+            background-color: #a50000;
+        }
+
+        .btn-custom:active,
+        .btn-custom:focus {
+            background-color: #a50000 !important;
+            box-shadow: 0 0 0 transparent !important;
+            border-color: #a50000 !important;
+        }
+
+        header {
+            padding: 45px 0;
+            background-color: #a50000;
+            background: #b40000 linear-gradient(-186deg,#b20000 1%,#b10101 0,#323e46);
+            margin-bottom: 50px;
+        }
+
+        header * {
+            color: #ffffff;
+        }
+
+        header #logo {
+            height: 70px;
+            display: block;
+            margin: 0 auto
+        }
+
+        main .col-md-6 {
+            border-radius: 6px;
+            box-shadow: 0 8px 16px 0 rgb(0 0 0 / 10%);
+            background: #fff;
+            padding: 5px 20px 0;
+        }
+
+        [type="radio"]:checked{
+            box-shadow: 0 0 0 transparent !important
+        }
+
+        [type="radio"]:checked+label:after {
+            background-color: #a50000;
+            border: 2px solid #ffffff;
+            border-radius: 100%;
+            box-shadow: 0 0 0 transparent !important
+        }
+
+        .custom-control-input:focus~.custom-control-label::before{
+            box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgb(214 138 138 / 44%);
+        }
+
+        .form-group {
+            padding-bottom: 13px;
+        }
+
+        .form-group label.error:nth-child(2) {
+            display: none;
+        }
+
+        .form-check-inline{
+            padding: 12px 13px;
+            border: solid 1px #ced4da;
+        }
+
+        form label {
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        form input.form-control,
+        form select.form-control {
+            line-height: 1.9;
+        }
+
+
+        form input.form-control:active,
+        form input.form-control:focus {
+            box-shadow: 0 0 0 transparent;
+            border-color: inherit;
+        }
+
+        form input.form-control.name {
+            background: url(name.png) no-repeat scroll 7px 7px;
+            padding-right: 30px;
+            background-position: 99% 50%;
+        }
+
+        form input.form-control.email {
+            background: url(email.png) no-repeat scroll 7px 7px;
+            padding-right: 30px;
+            background-position: 99% 50%;
+        }
+
+        form input.form-control.phone {
+            background: url(phone.png) no-repeat scroll 7px 7px;
+            padding-right: 30px;
+            background-position: 99% 50%;
+        }
+
+        .wizard .content h3 {
+            position: absolute;
+            left: -999em;
+        }
+
+        .wizard .steps>ul {
+            position: absolute;
+            left: -999em;
+        }
+
+        #q14-error{
+            display: none;
+        }
+
+        .wizard .error {
+            border-color: #8a1f11;
+        }
+
+        .wizard>.content>.body label.error {
+            color: #8a1f11;
+            font-size: 12px;
+            position: relative;
+            left: 20px;
+        }
+
+        .actions {
+            padding: 20px 0
+        }
+
+        .actions ul {
+            display: inline-block;
+            padding: 0;
+            width: 100%;
+            list-style: none
+        }
+
+        .actions ul li {
+            display: inline;
+        }
+
+        .actions ul li:nth-child(1) {
+            float: left;
+        }
+
+        .actions ul li:nth-child(2) {
+            float: right;
+        }
+
+        .actions ul li:nth-child(3) {
+            float: right;
+        }
+
+        .welcome-text{
+
+        }
+
+        .welcome-text h2{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            padding: 34px 5% 34px;
+            background-color: #d3d3d3;
+            margin-top: 50px
+        }
+
+        footer * {
+            color: #414141;
+            margin: 0;
+        }
+
+        footer img {
+            height: 72px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer p {
+            margin-right: auto;
+        }
+
+        .counter {
+            display: inline-block;
+            padding: 1px 8px;
+            border: solid 1px #a50000;
+            border-radius: 100px;
+            margin-top: 20px;
+            color: #a50000;
+        }
+
+        .counter p {
+            display: inline;
+            color: #a50000
+        }
+
+        @media(max-width: 767px) {
+            header {
+                padding: 40px 0 !important;
+            }
+
+            header #logo {
+                height: 35px;
+            }
+
+            main .main-heading h2{
+                font-size: 1.5rem;
+            }
+
+            .welcome-text h2{
+                font-size: 14px ;
+            }
+        }
+
+        .wizard > .actions > ul > li.disabled:nth-child(1) {
+            display: none !important;
+        }
+
+        .arrow{
+            animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        .arrow img{
+            transform: rotate(360deg);
+            transform-origin: 0% 0%;
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        #file.success{
+            background-image: url(check-mark.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-right: 55px;
+        }
+
+        #file.uploading{
+            background-image: url(Chasing-blocks.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding-right: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container text-center">
+            <img src="logo.png" id="logo">
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            
+            <div class="col text-center col-12 pt-2 pb-3 welcome-text">
+                <h2><b>Step I:</b> Fill out the Application...</h2>                
+                <h2><b>Step II:</b> If Approved, We Will Call You At Your Desired Time.</h2>
+            </div>
+            <div class="col-12 text-center pb-4 arrow">
+                <img src="Arrows.gif" width="150" class="d-block mx-auto img-fluid">
+            </div>
+            <div class="col-md-6 offset-md-3 col-12">
+                <div class="main-heading pt-5 pb-4">
+                    <h2 class="pb-3 border-bottom">Straightline Application</h2>
+                </div>
+                <form id="contact" action="#" enctype="multipart/form-data">
+
+                    <div>
+                        <h3>Account</h3>
+                        <section>
+                            <div class="form-group">
+                                <label for="q1">What are you doing now?</label>
+                                <input id="q1" name="q1" type="text" class="form-control required" >
+                            </div>
+                            <div class="form-group">
+                                <label for="q2">Why are you interested in exploring what we do?</label>
+                                <input id="q2" name="q2" type="text" class="form-control required" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="q3">What is it that motivates you?</label>
+                                <input id="q3" name="q3" type="text" class="form-control required" placeholder="">
+                            </div>
+                        </section>
+                        <h3>Profile</h3>
+                        <section>
+                            <div class="form-group">
+                                <label for="q4">If you got 10-15 qualified appointments can you manage that
+                                    well?</label>
+                                <input id="q4" name="q4" type="text" class="form-control required" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="q5">Besides money, what is important to you?</label>
+                                <input id="q5" name="q5" type="text" class="form-control required" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="q6">What is your short term and long term goals</label>
+                                <input id="q6" name="q6" type="text" class="form-control required" placeholder="">
+                            </div>
+                        </section>
+                        <h3>Hints</h3>
+                        <section>
+                            <div class="form-row pb-4">
+                                <div class="col">
+                                    <label for="q7">Your Name</label>
+                                    <input id="q7" name="q7" type="text" class="form-control required" placeholder="">
+                                </div>
+                                <div class="col">
+                                    <label for="q8">Last Name</label>
+                                    <input id="q8" name="q8" type="text" class="form-control required name" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="q9">Your Best Email</label>
+                                <input id="q9" name="q9" type="email" class="form-control required email" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="q13">Phone Number</label>
+                                <input id="q13" name="q13" type="text" class="form-control required phone"
+                                    placeholder="(XXX) XXX-XXXX" data-inputmask-mask="(999) 999-9999">
+                            </div>
+                        </section>
+                        <h3>Test</h3>
+                        <section>
+                            <div class="form-group">
+                                <label for="q10">Right Now I...</label>
+                                <select class="form-control" id="q10" name="q10">
+                                    <option selected>Choose One...</option>
+                                    <option value="I am ready to fast track and accelerate my success">I am ready to
+                                        fast track and accelerate my success</option>
+                                    <option value="I am just looking around">I am just looking around</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="q11">Best Time To Call...</label>
+                                <input id="q11" data-toggle="tooltip" data-placement="right" title="Someone will call you on requested date for selected slot; morning or afternoon (Between 10 AM - 3 PM)" name="q11" type="text" class="form-control required datetimepicker">
+                                <div class="pt-3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" checked value="Morning" id="customRadioInline1" name="q14" class="custom-control-input">
+                                        <label class="custom-control-label" value="Morning" for="customRadioInline1">Morning</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" value="Afternoon" name="q14" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline2">Afternoon</label>
+                                      </div>
+                                </div>
+                            </div>
+                           
+                            <div class="form-group">
+                                <label for="q12">Yes, You Can Count On Me To Prioritize Our Phone Call</label>
+                                <input id="q12" name="q12" type="text" class="form-control required"
+                                    placeholder="Yes or No">
+                            </div>
+                            <div class="form-group">
+                                <label for="file">Upload Resume (Optional)</label>
+                                <input id="file" class="form-control required" name="file" type="file" />
+                                <input type="hidden" id="hiddenImageInput" name="filename">
+                                <small>Choose DOC, DOCX or PDF file only.</small>
+                            </div>
+                        </section>
+                    </div>
+                </form>
+               
+            </div>
+            <div class="d-block text-center">
+                <span class="counter align-items-center">
+                    <p id="current">1</p> / <p id="total">4</p>
+                </span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <img src="Final-01.png">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <p class="d-inline">Straightline Design 2021 </p> &nbsp; | &nbsp; <p class="d-inline">All Rights
+                        Reserved</p>
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <p class="">12783 W Lasalle, Suite B, Boise ID, 83713</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="">Email: careers@whystraightline.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="date-time.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+    <script>
+        var form = $("#contact");
+        form.validate({
+            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            rules: {
+                confirm: {
+                    equalTo: "#password"
+                },
+                qp: {
+                    emailExt: true
+                },
+                q13: {
+                    phoneUS: true
+                }
+            }
+        });
+        form.children("div").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true,
+            saveState: true,
+            onInit: function (event, current) {
+                $('.actions > ul > li:first-child').attr('style', 'display:block');
+                // if(current == 0)
+                // {   
+                //     $('a[href^="#previous"]').hide();
+                // }
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                // Allways allow step back to the previous step even if the current step is not valid!
+
+                if (currentIndex > newIndex) {
+                    return true;
+                }
+
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            },
+            onStepChanged: function (event, currentIndex, priorIndex) {
+                $('#current').text(currentIndex + 1);
+                
+            },
+
+            onFinishing: function (event, currentIndex) {
+                form.validate().settings.ignore = ":disabled";
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex) {
+
+                $('.wizard .steps a:eq(0)').click();
+                $('.wizard').hide();
+                $('#custom-message').show();
+
+                // Get form
+                var form = $('#contact')[0];
+
+                // Create an FormData object 
+                var data = new FormData(form);
+
+                // disabled the submit button
+                $(".btn-custom").text('Processing...');
+                $(".btn-custom").prop("disabled", true);
+
+                $.ajax({
+                    type: "POST",
+                    url: "send_mail.php",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 800000
+                })
+                    .done(function (msg) {
+                        $(".btn-custom").prop("disabled", false);
+                        if (msg) {
+                            $('main').hide();
+                            $('.welcome-text').hide();
+                            $('.arrow').hide();
+                            $("<main class='py-5 text-center'>Loading...Please Wait!</main>").insertAfter("header");
+                            $("<main class='py-5'><div class='container text-center'><img src='man1-300x213@2x EDITED.png' class='img-fluid mx-auto d-block'><h4 class='pt-5'>Thankyou For Applying!</h4><p class='pb-2'>We will get back to you soon if you are shortlisted.</p><a href='https://straightlinedesignllc.com' class='btn btn-custom colorme'>Ok</a></div></main>").insertAfter("header");
+                        }
+                    });
+            }
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.actions ul li a').addClass('btn btn-primary btn-custom colorme');
+
+        });
+
+    </script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            if (window.jQuery().datetimepicker) {
+                $('.datetimepicker').datetimepicker({
+
+
+                    // Formats
+                    // hh:mm A
+                    // follow MomentJS docs: https://momentjs.com/docs/#/displaying/format/
+                    format: 'DD-MM-YYYY',
+
+                    // Your Icons
+                    // as Bootstrap 4 is not using Glyphicons anymore
+                    icons: {
+                        time: 'fa fa-clock-o',
+                        date: 'fa fa-calendar',
+                        up: 'fa fa-chevron-up',
+                        down: 'fa fa-chevron-down',
+                        previous: 'fa fa-chevron-left',
+                        next: 'fa fa-chevron-right',
+                        today: 'fa fa-check',
+                        clear: 'fa fa-trash',
+                        close: 'fa fa-times'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        jQuery('#q13[data-inputmask-mask]').inputmask();
+        
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        $(window).on('resize', function() {
+            var pos = ($(window).width() < 768) ? 'top' : 'right';
+            $("#q11").tooltip({'placement': pos});
+        }).trigger('resize');
+    </script>
+
+<script>
+    //form Submit
+    $(document).ready(function(){
+        $(document).on('change', '#file', function(e){
+       e.preventDefault();
+       var formElement = document.getElementById("file").files[0].name;
+       console.log(formElement);
+       var formData = new FormData();
+       var ext = formElement.split('.').pop().toLowerCase();
+        if(jQuery.inArray(ext, ['gif','png','jpeg']) == 1) 
+        {
+            alert("Invalid Image File");
+        }
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("file").files[0]);
+        var f = document.getElementById("file").files[0];
+        var fsize = f.size||f.fileSize;
+        if(fsize > 2000000)
+        {
+        alert("Image File Size is very big");
+        }
+        else
+  {
+    formData.append("file", document.getElementById('file').files[0]);
+
+    $.ajax({
+        url: 'fileupload.php',
+        type: 'POST',
+        data: formData,
+        async: true,
+        cache: false,
+        contentType: false,
+        enctype: 'multipart/form-data',
+        processData: false,
+        beforeSend:function(){
+            $('#file').removeClass('success');
+            $('#file').addClass('uploading');
+        },
+        success: function (data) {
+                            console.log(data);
+
+            if(data[0].status){
+                console.log(data[0].filename);
+                $('#hiddenImageInput').val(data[0].filename);
+                $('#file').removeClass('uploading');
+                $('#file').addClass('success');
+            }
+            else{
+                console.log(data);
+            }   
+        },
+         error: function(jqxhr, status, exception) {
+             alert('Exception:', exception);
+         }
+
+    });
+
+    return false;
+}
+  });
+});
+
+ </script>
+</body>
+
+</html>
